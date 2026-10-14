@@ -1,0 +1,22 @@
+# REAL customer chats must never be published (names, phone numbers, orders).
+# Everything in chats/ and every .txt is ignored, except the fake sample.
+chats/
+*.txt
+!examples/sample_chat.txt
+!requirements*.txt
+
+# Generated output
+*.xlsx
+*.csv
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
