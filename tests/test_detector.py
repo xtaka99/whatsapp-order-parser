@@ -107,3 +107,9 @@ def test_order_before_any_product_is_unmatched():
 def test_seller_name_match_ignores_case_and_accents():
     r = detect([msg(0, "LOJÁ", "Caneca R$ 10,00", media=True), msg(1, "Ana", "quero")], ["loja"])
     assert len(r.products) == 1 and len(r.orders) == 1
+
+
+def test_guarda_counts_as_an_order():
+    r = detect([post(0, "Caneca #A1"), msg(1, "Ana", "me guarda 2")], [SELLER])
+    assert len(r.orders) == 1
+    assert r.orders[0].quantity == 2

@@ -27,7 +27,7 @@ CODE = re.compile(r"#\s?([A-Za-z]{0,3}\d{1,4})\b")
 CANCEL = re.compile(r"\b(nao quero|nao vou querer|desisto|desisti|cancela\w*|pode tirar)\b")
 WANT = re.compile(
     r"\b(quero|qro|kero|vou querer|vou levar|pra mim|para mim|p mim"
-    r"|reserva\w*|separa\w*|fico com)\b"
+    r"|reserva\w*|separa\w*|fico com|guarda)\b"
 )
 NUMBER_WORDS = {
     "um": 1, "uma": 1, "dois": 2, "duas": 2, "tres": 3, "quatro": 4, "cinco": 5,
